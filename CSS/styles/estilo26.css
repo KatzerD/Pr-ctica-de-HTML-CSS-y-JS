@@ -1,0 +1,46 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.container{
+    background: #d88116;
+    padding: 30px;
+}
+
+.caja{
+    background: #b5364f;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    display: flex;
+
+    transition: transform 1s;
+}
+
+.caja:first-child:hover{
+    transform: translate(50px, -30px);/*shorthand de translateX y translateY*/
+}
+.caja:nth-child(2):hover{
+    transform: scale(3, 1.5);/*shorthand de scaleX y scaleY*/
+}
+.caja:nth-child(3):hover{
+    transform: translate(100%) scaleX(1.5);/*el % en trasnlate es de acuerdo al tamaño del elemento*/
+}
+.caja:nth-child(4):hover{
+    transform: skew(-45deg);/*tambien es un shorthand y se utiliza en grados para deformar el elemento*/
+}
+.caja:nth-child(5):hover{
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);/*https://bennettfeely.com/clippy/*/
+}
+.caja:nth-child(6):hover{
+    transform: rotate(30deg);
+}
+
+
+
+/*Es una buena practica utilisar transform para realizar las modificaciones dinamicas en la pagina web ya que de esta manera se consumen menos recursos*/
+
+/*Para mas valores de la propiedad transform visitar la pagina 
+https://www.w3schools.com/cssref/css3_pr_transform.asp*/

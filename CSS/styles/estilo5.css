@@ -1,0 +1,39 @@
+*{
+    font-family: sans-serif;
+    font-size: 30;
+}
+
+/*=======================================================================================*/
+
+h2{
+    display: inline; /* Inline para convertir un elemento a linea y block para convertirlo en bloque */
+    /* A los elementos elementos en linea no se les puede dar algunos valores que si aplicarian si fuesen en bloque, por ejemplo las propiedades height, width */
+    background-color: cyan;
+}
+
+/*=======================================================================================*/
+
+p{
+    font-size: 20px;
+    padding: 20px; /* El padding es la distancia entre el texto y la caja.
+        Para ajustar cada lado del padding independientemente se utiliza el padding-top, padding bottom, padding-left, padding-right.
+        Para distanciar el eje x y eje y se le agruega un valor mas al padding, ej.: padding: 20px(y) 30px(x). Para distanciar cada lado independientemente solo usando padding le agruegamos hasta 4 valores, 
+        ej.: padding: 20px(top) 30px(right) 40px(bottom) 15px(left), si un valor queda sin definir se ke asigna el padding de su eje correspondiente*/
+    background-color: darkcyan;
+    box-sizing: border-box;
+    display: inline-block;
+    
+    margin: 20px 10px;/*El margin delimita la distancia de la caja a las demas cajas y cumple con las mismas propiedades que el padding*/ 
+
+    border-radius: 10px; /*redondea los bordes de la caja*/
+
+    border: 5px solid gray; /* De esta forma se abrevian todos los parametros de un borde.
+    border: <tamaño> <estilo> <color>; */
+
+    box-shadow: 20px 10px 30px 10px black; /*De esta forma le damos una sombre a la caja contenedora del texto.
+    box-shadow: <eje x> <eje y> <tamaño del desenfoque> <borde de la sombra> <color de la sombra>;*/
+
+    text-shadow: 2px 2px 10px white , 2px 2px 10px white; /*El text-shadow cumple con los mismos parametros que el box-shadow pero sin el <borde de sombra>, se pueden separar entre comas para dar mas intensidad a las sombras*/
+
+    transform: rotate(-20deg); /* esto es una funcion y se le debe asignar los parametros dentro de los parentesis. Rotate lo que hace es rotar cierta cantidad de grados nuestro elemento*/
+}

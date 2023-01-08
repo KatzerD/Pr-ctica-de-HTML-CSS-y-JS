@@ -1,0 +1,51 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.container{
+    background-color: #6e5b80;
+    padding: 30px;
+}
+
+.caja{
+    height: 100px;
+    width: 100px;
+    background-color: #439dba;
+    margin: 20px;
+    position: relative;
+
+    animation-name: desplazarse;
+    animation-duration: 2s;/*name y duration son dos parametros obligaorios para las animaciones*/
+
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);/*se define la velocidad en la que ocurren las animaciones, tiene los mismos valores que transition y tambien cubic-bezier*/
+
+    animation-iteration-count: infinite;/*se definen la cantidad de veces que se repetira la animacion*/
+
+    animation-direction: alternate;/*normal, reverse, alternate, alternate-reverse*/
+
+    animation-delay: 1s;/*tiempo e que tarda en iniciarse la animacion*/
+
+    animation-fill-mode: both; /*none, backwards, forewards , both*/
+    /*fill mode define como va a quedar la animacion al finalizar
+    none: valor por defecto, se reinicia la animacion, queda con los valores que no estan dentro del keyframe
+    backwards: el elemento obtendra los valores de estilo establecidos por el primer fotograma, o sea en la posicion inicial de la animacion
+    forewards: se queda como se define en la ultima instancia de la animacion
+    both: los valores del elemento se establecen como estan definidos en la animacion(keyframe) y finaliza como un forewards*/
+}
+
+
+@keyframes desplazarse {
+    0%{/*lo que ocurrira al iniciar la animacion*/
+        left: 0;
+        background-color: #834e5b;
+    }
+    50%{/*lo que ocurrira a mitad de la animacion*/
+        background-color: #91d4a7;
+    }
+    100%{/*lo que ocurrira al finalizar la animacion*/
+        left: 90%;
+        background-color: #dbd3ae;
+    }
+}

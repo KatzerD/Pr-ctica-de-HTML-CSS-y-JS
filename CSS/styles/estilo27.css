@@ -1,0 +1,27 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+:root{/*en root se crean las variables globales*/
+    --color-rojo-claro: #f66;
+    --color-azul-claro: #66f
+}
+
+div{
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+}
+
+.caja-rebelde{
+    --color-rojo-claro: #f44;/*crear o redefinir una variable dentro de un elemento hace que solo se aplique a este, es decir, es una variable local*/
+    background: var(--color-rojo-claro);
+}
+.caja-roja{
+    background: var(--color-rojo-claro);
+}
+.caja-azul{
+    background: var(--color-azul-claro);
+}

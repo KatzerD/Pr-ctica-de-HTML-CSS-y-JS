@@ -1,0 +1,97 @@
+*{
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 20px;
+}
+
+div{
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+.caja1{
+    background-color: red; /*por defecto el position de un objeto es position:static*/
+    /*al posicionar un elemento le damos 5 propiedades nuevas, estas son: top, left, right, bottom, z-index*/
+    opacity: .5; /*el opacity es el nivel de transparencia del elemento, va del 0 al 1 en decimales*/
+}
+.caja2{
+    background-color: blue;
+    position: relative; /*el position relative conserva el espacio que ocupaba originalmente la caja pero la visualiza en otra posicion*/
+    top: -125px;
+    left: 100px;
+    z-index: -1;
+}
+.contenedor{
+    border: 5px solid red;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+div div{
+    height: 70px;
+    width: 70px;
+    background-color: green;
+    position: absolute;/*el position absolute no reserva el espacio que ocupaba originalmente la caja, y su posicion se miden a partir del viewport o la caja que lo contenga*/
+
+    /*para que las cajas dentro del contenedor esten posicionadas respecto a este el contenedor debe estar posicionado, por ejemplo con un relative*/
+}
+
+.caja3{
+    top: 0;
+}
+.caja4{
+    bottom: 0;
+}
+.caja5{
+    right: 0;
+}
+.caja6{
+    right: 0;
+    bottom: 0;
+}
+.caja7{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.seccion{
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+}
+body{
+    padding-top: 50px;
+}
+.cajaFixed{
+    
+    display: inline;
+    background-color: red;
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    top: 2px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin: auto;
+}
+.cajaFixed b{
+    font-size: 50px;
+}
+
+.cajaSticky{
+    background-color: gray;
+    position: sticky;
+    opacity: .9;
+    top: 52px;
+    width: fit-content;
+    height: fit-content;
+}
+.cajaSticky b{
+    font-size: 50px;
+}

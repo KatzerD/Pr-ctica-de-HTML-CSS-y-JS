@@ -1,0 +1,32 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.block{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border: 10px solid red;
+    background-color: yellow;
+    display: block; /*El tipo block ocupa toda la linea y no se pueden poner otros elementos al lado*/
+}
+
+.inline{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border: 10px solid red;
+    background-color: yellow;
+    display: inline; /*El tipo inline coloca los elementos en la misma linea, pero no puede modificarse su height y width*/
+}
+
+.inline-block{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border: 10px solid red;
+    background-color: yellow;
+    display: inline-block; /*el tipo inline-block coloca los elementos en la misma linea, pero estos si pueden modificarse su height y width como el block*/
+}

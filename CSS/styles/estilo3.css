@@ -1,0 +1,11 @@
+.contactForm__input{
+    color: rgb(82, 79, 79);
+}
+
+.contactForm__input:first-child {
+    color: rgb(163, 17, 17);
+}
+
+.contactForm__input--active{
+    color: rgb(255, 0, 0);
+}

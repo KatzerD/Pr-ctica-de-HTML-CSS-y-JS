@@ -1,0 +1,73 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+div{
+    margin: 10px;
+    outline: 4px solid red;
+}
+
+.Original{
+    width: 400px;
+    height: 300px;
+}
+
+.flex{
+    display: flex; /*El display flex permite modificar la imagen de manera no proporcionada*/
+    width: 200px;
+    height: 250px;
+}
+
+.imgContain{
+    width: 500px;
+    height: 250px;
+    
+}
+.imgContain img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;/* El contain ajusta la imagen al contenedor */
+}
+
+.imgCover{
+    width: 500px;
+    height: 250px;
+}
+.imgCover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* El cover hace qu la imagen ocupe todo el contenedor, pudiendo quedar parte de la imagen fuera de l contenedor y no visible */
+}
+
+.imgNone{
+    width: 200px;
+    height: 250px;
+}
+.imgNone img{
+    width: 100%;
+    height: 100%;
+    object-fit: none;/* El none pone la imagen con sus resoluciones originales dentro del contenedor */
+}
+
+.imgScaleDown{
+    width: 500px;
+    height: 500px;
+}
+.imgScaleDown img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;/* El scale-down aplica la propiedad contain o none segun sea conveniente, esto lo hace seleccionando la resolucion mas pequeña entre estos dos */
+}
+
+.imgPosition{
+    width: 500px;
+    height: 500px;
+}
+.imgPosition img{
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: left;/*Ajusta la posicion de la imagen dentro del contenedor*/
+}

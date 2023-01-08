@@ -1,0 +1,27 @@
+*{
+    font-family: sans-serif;
+    font-weight: 900;
+    
+}
+
+h1{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 50px;
+    color: crimson;
+    line-height: 2;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 500;
+}
+
+#ejemplo{
+    font-size: 1px; /* Tamaño de la letra */
+    font-family: sans-serif;/* tipografia de la letra externa o interna */
+    line-height: 1; /* Grosor del bloque donde va la letra */
+    font-weight: 200; /* Grosor de la letra */
+    font-stretch: normal ;
+    font-variant: normal;
+} 
+

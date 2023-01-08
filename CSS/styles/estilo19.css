@@ -1,0 +1,143 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+
+
+body{
+    background: radial-gradient(circle, #fff, #ccc);
+    padding: 20px;
+}
+
+
+.grid-container1{
+    display: grid;
+    border: 3px solid #000;
+    background-color: rgb(53, 53, 53);
+    margin-bottom: 50px;
+    
+    grid-template-columns: 150px 150px 150px 1fr; /*px, em, %, fr*//*El fr lo que hace es repartir proporcionalmente el espacio sobrante en el contenedor a las grillas*/
+    grid-template-rows: repeat(4, 150px); /*al repeat se le asignan dos parametros, el primero indica la cantidad de veces que se repetira y el segundo lo que va a repetir, en este caso quedaria como 150px 150px 150px*/
+
+    grid-gap: 10px; /* grid-gap es un shorthand de grid-row-gap y grid-column-gap que lo que hacen es asignar un espacio de separacion entre cada filo y/o columna*/
+
+    grid-auto-rows: 100px;
+    grid-auto-columns: 1fr;/* El grid-autorows y columns lo que hace es agregar nuevas filas o columnas las grillas que queden fuera de la dimension inicial y les definimos su tamaño*/
+
+    grid-auto-flow: row;/* El grid-auto-flow define como se posicionaran las celdas en caso de no caber dentro del template. Row para definir como filas, column para definir como columnas y dense para rellenar los espacios vacios dentro de la grilla*/
+
+    /* El grid-auto se utiliza para programar el grid implicito */
+    /*estas propiedades de grid son exclusivas para el contenedor*/
+}
+
+.grid-item1 {
+    border: 1px solid #000;
+    background-color: #999;
+}
+
+.grid-item1:first-child /*de esta manera se elije el primer elemento*/ {
+    background-color: rgb(196, 38, 38);
+    grid-column: 1/3; /*shorthand de grid-column-start y grid-column-end: ;*/
+    grid-row: 1/span 2;/*shorthand de grid-row-start y grid-row-end: ;*/
+}
+
+.grid-item1:nth-child(2) /*De esta manera se puede elejir cualquier item segun sea su posicion*/ {
+    background-color: #090;
+    grid-column: 3/span 2; /*El atributo span lo que hace es expandir las filas o columnas cierta contidad de veces*/
+}
+
+
+
+
+
+
+.grid-container2{ /* Grid Dinamico*/
+    display: grid;
+    border: 3px solid #000;
+    background-color: rgb(53, 53, 53);
+    margin-bottom: 50px;
+
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    /*auto-fill: recoloca las celdas de las grillas para que ocupen todo el espacio posible en la fila o columna
+    
+    auto-fill: crea mas columnas o filas segun sea el tamaño del contenedor sin importar si sobran celdas vacias
+    
+    minmax: funcion que requiere de dos parametros, el primero que sera el tamaño minimo que tendra cada celda y el segundo el maximo
+    
+    min-content: ajusta el tamaño minimo que tendra la celda a su contenido
+    
+    max-content: ajusta el tamaño maximo que tendra la celda a su contenido */
+    
+    grid-template-rows: repeat(3, 100px);
+}
+.grid-item2{
+    border: 1px solid #000;
+    background-color: #999;
+}
+
+
+
+
+
+
+
+
+.grid-container3{ /* Alineacion y control de flujo */
+    display: grid;
+    border: 3px solid #000;
+    background-color: rgb(53, 53, 53);
+    margin-bottom: 50px;
+    height: 800px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    justify-content: stretch; /*start, end, center, stretch, space-around, space-between, space-evenly*/
+    justify-items: center;/*start, end, center, stretch*/
+    /* justify-items en grid funciona como el justify-content en flex-box, lo que hace es alinear los items de manera horizontal dentro del grid, si usaramos content alinearia las columnas, o sea mantiene su proporcion*/
+
+    align-content: stretch; /*start, end, center, stretch, space-around, space-between, space-evenly*/
+    align-items: center;/*start, end, center, stretch*/
+    /* align-items alinea el contenido del grid de manera vertical,si usaramos content alinearia las filas, o sea mantiene su proporcion */
+
+
+}
+.grid-item3{
+    border: 1px solid #000;
+    background-color: #999;
+    padding: 50px;
+}
+.grid-item3:first-child{
+    align-self: flex-start;
+    justify-self: flex-start; 
+    /* con la propiedad align-self y justify-self alineamos cada item por separado en la fila y columna respectivamente*/
+    /* un shorthand para align y justify seld es place-self */
+    background-color: red;
+    order: 0; /*la propiedad order tambien aplica en grid como en flex*/ 
+}
+.grid-item3:nth-child(3){
+    place-self: start end; /* shorthand place-seld */
+    background-color: red;
+}
+.grid-item3:nth-child(4){
+    justify-self: end;
+}
+.grid-item3:nth-child(5){
+    background-color: limegreen;
+}
+.grid-item3:nth-child(6){
+    justify-self: start;
+}
+.grid-item3:nth-child(7){
+    align-self: end;
+    justify-self: start;
+    background-color: red;
+}
+.grid-item3:last-child{
+    align-self: end;
+    justify-self: end;
+    background-color: red;
+}

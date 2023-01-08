@@ -1,0 +1,47 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+}
+
+.flex-container{
+    display: flex;
+    outline: 4px solid blue;
+    height: 100vh;
+    flex-direction: row-reverse;
+}
+
+.flex-item {
+    background-color: darkslateblue;
+    color: white;
+    height: 100px;
+    min-width: 150px;
+    text-align: center;
+    flex-grow: 1;
+    width: 300px;
+}
+
+.orange{
+    background-color: orange;
+    flex:1 0 300px; /* -grow -shrink -basis */
+    order: 50;
+}
+.green{
+    background-color: green;
+    align-self: flex-start;
+}
+
+/* Cuando un contenedor es display:flex; los items adquieren unas propiedade nuevas que podemos modificar, estas son:
+
+align-self: posiciona el item dentro del contenedor en en la posicion que le indiquemos (flex-start, flext-end, baseline, center...)
+
+flex-grow: lo que hace es que divide el espacio que ocupan los items en el contenedor en porciones(1, 2, 3...)
+
+flex-shrink: esta propiedad es como la inversa de grow, lo que hacemos con esta propiedad es definir cuanto espacio van a ceder la o las cajas dentro del contenedor, hasta que se alcance el width especificado.
+
+flex-basis: funciona igual que el width, pero tiene mas importancia jerarquica que este, se recomineda utilizar el flex-basis cuando trabajamos con cajas flexibles y en conjunto con flex-shrink
+
+flex: es un shorthand que combina flex-grow, flex-shrink, flex-basis y debe tener obligatoriamente al menos el primer parametro
+
+order: es como el z-index pero en el eje en que apunta el main-axis
+
+*/

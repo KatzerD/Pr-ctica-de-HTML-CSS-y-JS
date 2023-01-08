@@ -1,0 +1,35 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+body{
+    background-color: black;
+}
+
+div {
+    height: 700px;
+    width: 700px;
+    margin: 50px auto;
+    background-color: gray;
+    border: 4px solid red;
+    overflow: auto;
+    /*overflow es un shorthand que combina las propiedades overflow-x y overflow-y, se utiliza para definir que se hara con lo que sobre dentro de un elemento: auto detecta automaticamente hacer, scroll coloca un scroll en el eje que se seleccione, hidden oculta lo sobrante sin scroll en el eje que se seleccione */
+    width: 50%;
+    padding: 20px;
+}
+
+div p{
+    width: 50%;
+}
+
+div img{
+    float: left; /*en esta ocasion se utiliza el left para posicionar la imagen sin sobreponer al texto*/
+    width: 300px;
+    height: 300px;
+    margin-right: 20px ;
+}
+
+
+

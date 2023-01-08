@@ -1,0 +1,24 @@
+*{ /*Para todo el documento*/
+    color: rgb(10, 10, 10);
+}
+h1{ /*Para todas las mismas etiquetas*/
+    color: greenyellow;
+}
+.colorRojo /*Para las mismas clases*/{
+    color: red;
+}
+#colorVerde /*Para las mismas id's*/{
+    color: green;
+}
+[atributo="valor"] /*Para los mismos atributos*/{
+    color: gray;
+}
+p b span /*Para etiquetas en un patron especifico*/{
+    color: blue;
+}
+p b{
+    color: crimson;
+}
+button b:hover{
+    color: forestgreen;
+}

@@ -1,0 +1,39 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+}
+
+.flex-container{
+    display: flex;
+    height: 500px;
+    outline: 4px solid blue;
+    height: 100vh;
+
+    flex-direction: row; /*row, row-reverse, column, column-reverse*/
+    flex-wrap: wrap-reverse;/* wrap. wrap-reverse, nowrap */
+
+    /* El flex-direction y flex-wrap se pueden abreviar con flex-flow. Ej.: flex-flow: column wrap; */
+
+    justify-content: space-evenly;/* center, space-arround, space-between, space-evenly. El justify-content nos da un margin a los items dentro del contenedor en el main-axis*/
+
+    align-items: flex-start; /* flex-start, center, flex-end, stretch, baseline. El align-items nos da un margin a los items dentro del contenedor en el cross-axis y se aplica para una sola linea*/
+
+    align-content: baseline;/* flex-start, center, flex-end, stretch, baseline. El align-content nos da un margin a los items dentro del contenedor en el cross-axis y se aplica a todas las lineas*/
+}
+
+.flex-item {
+    background-color: darkslateblue;
+    color: white;
+    margin: 5px;
+    height: 120px;
+    
+    min-width: 120px;
+    text-align: center;
+}
+
+.orange{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+}

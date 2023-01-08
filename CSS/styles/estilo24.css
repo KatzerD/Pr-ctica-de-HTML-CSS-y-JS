@@ -1,0 +1,64 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.container{
+    background-color: #95cc74;
+    padding: 20px 5px;
+}
+
+.caja{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #edf19d;
+    margin: 30px;
+    left: 0;
+
+    transition-property: left, background;
+
+    transition-duration: 1s, 1.5s; 
+    /* El transition property y duration van de la mano, ambas deben estar definidas para notar la transicion en la pagina*/
+
+    transition-delay: 0s;
+    /* Es el tiempo que tarda en iniciarse y finalizar la transicion*/
+}
+
+.container:hover > .caja{
+    left: 80%;
+    background: #77b17d;
+}
+
+.caja:first-child{
+    transition-timing-function: ease;
+}
+.caja:nth-child(2){
+    transition-timing-function: linear;
+}
+.caja:nth-child(3){
+    transition-timing-function: ease-in;
+}
+.caja:nth-child(4){
+    transition-timing-function: ease-out;
+}
+.caja:nth-child(5){
+    transition-timing-function: ease-in-out;
+}
+.caja:nth-child(6){
+    transition-timing-function: step-start;
+}
+.caja:nth-child(7){
+    transition-timing-function: step-end;
+}
+.caja:nth-child(8){
+    transition-timing-function: steps(int, start);
+}
+.caja:nth-child(9){
+    transition-timing-function: steps(int, end);
+}
+.caja:nth-child(10){
+    transition-timing-function: initial;
+}
+/*transition-timing-function se utiliza para variar la velocidad en la que ocurren las transiciones*/

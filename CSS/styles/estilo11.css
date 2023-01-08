@@ -1,0 +1,71 @@
+*{
+    font-family: 'Lucida Sans';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.cursorEncima{
+    width: 300px;
+    height: 300px;
+    background-color:salmon;
+    padding: 50px;
+    margin: 50px auto;
+    transition: padding 1s, background-color 2s, color .3s, width 1s, height 1.2s; /*en el transition podemos poner la velocidad a la que cambian las propiedades, asi tambien poner all para aplicar la misma velocidad a todas las propiedades*/
+}
+
+.cursorEncima:hover{
+    padding: 100px;
+    background-color: sandybrown;
+    color: white;
+    width: 350px;
+    height: 400px;
+    /*Hover se utiliza para que cuando pongamos el cursor encima del elemento ocurra una accion*/
+}
+
+a{
+    font-weight: 500;
+}
+a:link{
+    color: darkred;
+    
+}
+a:visited{
+    color: dimgray;
+}
+/*Link y visited se utiliza para modificar el la forma en la que se presentan los links y los links ya visitados*/
+
+.activador{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(199, 6, 6);
+    margin: 50px ;
+    transition: all 1s;
+}
+.activador:active{
+    width: 400px;
+    background-color: rgb(131, 1, 1);
+    ;
+}
+
+.inputFocus{
+    margin: 20px;
+    background-color: rgb(185, 185, 185);
+    transition: all 0.4s;
+}
+.inputFocus:focus{
+    background-color: white;
+    padding: 30px;
+}
+/* Focus se usa principalmente en inputs, estos modifican las propiedades del input cuando se es enfocado a este*/
+
+.idiomas{
+    margin: 20px auto;
+}
+p:lang(en){
+    color: white;
+    background-color: blue;
+}
+p:lang(es){
+    color: yellow;
+    background-color: red;
+}
