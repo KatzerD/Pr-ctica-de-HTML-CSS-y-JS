@@ -1,0 +1,39 @@
+<!--
+El DOM en una pagina web
+    - EL dom es todo lo que engloba  a una pagina web, dentro del dom se encuentran el documento html, los estilos de css, los scripts de javascripts y todo lo que se incorpore a esta pagina
+
+Nodo
+    -Un nodo en el dom es cualquier etiqueta del cuerpo, como un parrafo, el mismo body o incluso las etiquetas de una lista, ademas de los atributos que estas etiquetas puedan contener
+
+        *Document: el nodo document es el nodo raiz, a partir del cual derivan el resto de nodos
+        *Element: nodos definidos por etiquetas html
+        *Text: el texto dentro de un nodo element se considera un nuevo nodo hijo de tipo text
+        *Attribute: los atributos de las etiquetas definen nodos
+        *Comentarios y otros: los comentarios y otros elementos como las declaraciones doctype en cabecera de los documentos Html generan nodos.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El DOM</title>
+    </head>
+    <body> 
+        <h1 id="titulo">El DOM</h1>
+
+        <p>Estos son parrafos de prueba</p>
+        <p>Estos son parrafos de prueba</p>
+        <p>Estos son parrafos de prueba</p><br>
+
+        <div class="bloque"> Estos son div de prueba</div><br>
+        <div class="bloque"> Estos son div de prueba</div><br>
+        <div class="bloque"> Estos son div de prueba</div><br>
+
+
+        <script src="scripts/dom.js"></script>
+
+        <a href="DOM-MetodosDeModificacion.html"><button>Siguiente</button></a>
+    </body>
+</html>
